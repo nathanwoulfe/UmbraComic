@@ -1,5 +1,5 @@
 # version format
-version: 1.0.0.{build}
+version: 1.0.1.{build}
 
 image: Visual Studio 2017
 
@@ -39,7 +39,7 @@ deploy:
         appveyor_repo_tag: true      
     
   - provider: GitHub
-    tag: v1.0.0
+    tag: v1.0.1
     release: Release 1.0.0
     description: 'The Codegarden18 release'
     force_update: true
