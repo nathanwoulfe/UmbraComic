@@ -16,9 +16,9 @@
 
 	<!-- SHARED PROPERTIES -->
 	<PropertyGroup>
-		<PackageName>Promote</PackageName>
+		<PackageName>UmbraComic</PackageName>
 		<MinUmbracoVersion>7.7.0</MinUmbracoVersion>
-		<Readme>Ad modules for Umbraco.</Readme>
+		<Readme>Save 400kb by avoiding backoffice webfonts</Readme>
 		<AuthorName>Nathan Woulfe</AuthorName>
 		<AuthorUrl>https://github.com/nathanwoulfe</AuthorUrl>
 		<PackageLicenseName>MIT license</PackageLicenseName>
@@ -28,8 +28,8 @@
 
 	<!-- NUGET ONLY PROPERTIES -->
 	<PropertyGroup>
-		<NuGetPackageName>Promote</NuGetPackageName>
-		<PackageId>Promote.Umbraco</PackageId>
+		<NuGetPackageName>UmbraComic</NuGetPackageName>
+		<PackageId>UmbraComic.Umbraco</PackageId>
 		<Copyright>Nathan Woulfe</Copyright>
 		<Owners>Nathan Woulfe</Owners>
 		<Tags>Umbraco UmbracoCMS</Tags>
@@ -74,7 +74,7 @@
   <PropertyGroup>
     <BuildConfig>Release</BuildConfig>
     <RootDir>$(MSBuildProjectDirectory)\..</RootDir>
-    <CoreProjectDir>$(RootDir)\Promote</CoreProjectDir>
+    <CoreProjectDir>$(RootDir)\UmbraComic</CoreProjectDir>
     <BuildUmbDir>$(MSBuildProjectDirectory)\_umbraco</BuildUmbDir>
     <BuildNuGetDir>$(MSBuildProjectDirectory)\_nuget</BuildNuGetDir>
     <ArtifactsDir>$(MSBuildProjectDirectory)\artifacts</ArtifactsDir>
@@ -108,14 +108,14 @@
 
 	<!-- COMPILE -->
 	<Target Name="Compile" DependsOnTargets="UpdateAssemblyInfo">
-		<MSBuild Projects="$(CoreProjectDir)\Promote.csproj" Properties="Configuration=$(BuildConfig)"/>
+		<MSBuild Projects="$(CoreProjectDir)\UmbraComic.csproj" Properties="Configuration=$(BuildConfig)"/>
 	</Target>
 
 	<!-- PREPARE FILES -->
 	<Target Name="PrepareFiles" DependsOnTargets="Compile">
 		<ItemGroup>
-			<BinFiles Include="$(CoreProjectDir)\Bin\$(BuildConfig)\Promote.dll" />
-			<PdbFiles Include="$(CoreProjectDir)\Bin\$(BuildConfig)\Promote.pdb" />
+			<BinFiles Include="$(CoreProjectDir)\Bin\$(BuildConfig)\UmbraComic.dll" />
+			<PdbFiles Include="$(CoreProjectDir)\Bin\$(BuildConfig)\UmbraComic.pdb" />
 			<SrcFiles Include="$(CoreProjectDir)\**\*.cs" Exclude="$(CoreProjectDir)\obj\**"/>
 			<PackageFile Include="$(MSBuildProjectDirectory)\package.xml" />
 			<NuSpecFile Include="$(MSBuildProjectDirectory)\package.nuspec" />
