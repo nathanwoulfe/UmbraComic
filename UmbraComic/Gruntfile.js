@@ -85,8 +85,8 @@
             },
 
             css: {
-                src: '<%= basePath %>/backoffice/style.css',
-                dest: '<%= dest %>/<%= basePath %>/backoffice/style.css'
+                src: '<%= basePath %>/style.css',
+                dest: '<%= dest %>/<%= basePath %>/style.css'
             },
 
             nuget: {
@@ -106,7 +106,7 @@
             umbracoBin: {
                 expand: true,
                 cwd: 'bin/Debug/',
-                src: 'Workflow.*',
+                src: 'UmbraComic.*',
                 dest: 'tmp/umbraco/bin'
             }
         },
@@ -161,34 +161,6 @@
         clean: {
             dist: '[object Object]',
             test: 'test/assets'
-        },
-
-        jshint: {
-            dev: {
-                files: {
-                    src: ['app_plugins/**/*.js']
-                },
-                options: {
-                    curly: true,
-                    eqeqeq: false,
-                    immed: true,
-                    latedef: false,
-                    newcap: false,
-                    esversion: 6,
-                    noarg: true,
-                    sub: true,
-                    boss: true,
-                    eqnull: true,
-                    validthis: true,
-                    //NOTE: we need to check for strings such as "javascript:" so don't throw errors regarding those
-                    scripturl: true,
-                    //NOTE: we ignore tabs vs spaces because enforcing that causes lots of errors depending on the text editor being used
-                    smarttabs: true,
-                    globals: {},
-                    force: true,
-                    loopfunc: true
-                }
-            }
         }
     });
 
