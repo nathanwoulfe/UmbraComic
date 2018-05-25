@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<umbPackage>
+  <info>
+    <package>
+      <name>UmbraComic</name>
+      <version>6666-alpha-000666</version>
+      <license url="http://www.opensource.org/licenses/mit-license.php">MIT license</license>
+      <url>https://github.com/nathanwoulfe</url>
+      <requirements>
+        <major>7</major>
+        <minor>7</minor>
+        <patch>0</patch>
+      </requirements>
+    </package>
+    <author>
+      <name>Nathan Woulfe</name>
+      <website>https://github.com/nathanwoulfe</website>
+    </author>
+    <readme><![CDATA[Save 400kb by avoiding backoffice webfonts]]></readme>
+  </info>
+
+  <DocumentTypes />
+  <Templates />
+  <Stylesheets />
+  <Macros />
+  <DictionaryItems />
+  <Languages />
+  <DataTypes />
+
+  <Actions />
+
+  <control />
+
+  <files><file><guid>1947cf74-b431-4553-aee4-6c6ce3e0d21a.manifest</guid><orgPath>/App_Plugins/UmbraComic</orgPath><orgName>package.manifest</orgName></file><file><guid>1e6e7c01-e9c0-44c2-8a74-16325525248a.css</guid><orgPath>/App_Plugins/UmbraComic</orgPath><orgName>style.css</orgName></file><file><guid>1f0c3678-79ca-4a18-9e2c-cae105f9c20b.dll</guid><orgPath>/bin</orgPath><orgName>UmbraComic.dll</orgName></file></files>
+
+</umbPackage>

@@ -194,7 +194,7 @@
           OutputDirectory="$(ArtifactsDir)"
           Symbols="true" />
 
-    <RemoveDir Directories="$(BuildUmbDir)" Condition="Exists('$(BuildUmbDir)')" />
+    <!-- <RemoveDir Directories="$(BuildUmbDir)" Condition="Exists('$(BuildUmbDir)')" /> -->
     <RemoveDir Directories="$(BuildNuGetDir)" Condition="Exists('$(BuildNuGetDir)')" />
 
   </Target>

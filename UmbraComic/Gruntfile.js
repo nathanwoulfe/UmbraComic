@@ -164,7 +164,7 @@
         }
     });
 
-    grunt.registerTask('default', ['sass', 'copy:config']);
+    grunt.registerTask('default', ['sass', 'copy:css', 'copy:config']);
     grunt.registerTask('nuget', ['clean', 'default', 'copy:nuget', 'template:nuspec', 'mkdir:pkg', 'nugetpack']);
     grunt.registerTask('package', ['clean', 'default', 'copy:umbraco', 'copy:umbracoBin', 'mkdir:pkg', 'umbracoPackage']);
 
